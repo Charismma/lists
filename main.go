@@ -77,6 +77,13 @@ func (list *LinkedList) insertBeforeValue(beforeValue, data int) {
 	fmt.Printf("Cannot insert node, before value %d doesn't exist", beforeValue)
 	fmt.Println()
 }
+func (list *LinkedList) deleteFront() {
+	if list.head != nil {
+		list.head = list.head.next
+		fmt.Println("Head node of linked list has been deleted/n")
+		return
+	}
+}
 func main() {
 	spisok := LinkedList{head: nil}
 	spisok.insertAtBack(10)
